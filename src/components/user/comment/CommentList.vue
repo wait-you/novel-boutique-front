@@ -69,11 +69,10 @@ export default {
 
     onActivated(async () => {
       const { data } = await listComment(state.page, state.limit);
-      state.page = data.page
-      state.limit = data.limit
-      state.total = data.total
+      state.page = data.pageNum;
+      state.limit = data.pageSize;
+      state.total = data.total;
       state.commentList = data.list
-      console.log(data)
     });
 
     return {
