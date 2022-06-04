@@ -61,45 +61,7 @@
       <div class="user_r">
         <p class="tit">已有账号？</p>
         <router-link :to="{ name: 'login' }" class="btn_ora_white"
-          >立即登录</router-link
-        >
-        <!--
-        <div class="fast_login" style="display: none">
-          <div class="fast_tit">
-            <p class="lines"></p>
-            <span class="title">其他登录方式</span>
-          </div>
-          <ul class="fast_list">
-            <li class="login_wb">
-              <a href="/"
-                ><img
-                  src="/images/login_weibo.png"
-                  alt="微博登录"
-                  class="img"
-                /><span>微博登录</span></a
-              >
-            </li>
-            <li class="login_qq">
-              <a href="/"
-                ><img
-                  src="/images/login_qq.png"
-                  alt="QQ登录"
-                  class="img"
-                /><span>QQ登录</span></a
-              >
-            </li>
-            <li class="login_wx">
-              <a href="/"
-                ><img
-                  src="/images/login_weixin.png"
-                  alt="微信登录"
-                  class="img"
-                /><span>微信登录</span></a
-              >
-            </li>
-          </ul>
-        </div>
-        -->
+          >立即登录</router-link>
       </div>
     </div>
   </div>

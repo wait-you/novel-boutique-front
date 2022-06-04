@@ -36,6 +36,11 @@ axios.interceptors.response.use(res => {
       router.push({ path: '/login' })
     }
 
+    //访问未授权
+    if (res.data.code == 'A0301'){
+      router.push({name: 'authorRegister'})
+    }
+
     return Promise.reject(res.data)
   }
 

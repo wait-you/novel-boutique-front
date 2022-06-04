@@ -1,11 +1,13 @@
 import request from '../utils/request'
 
+const baseUrl = 'front/resource'
+
 export function getImgVerifyCode() {
-    return request.get('/resource/img_verify_code');
+    return request.get(`${baseUrl}/img_verify_code`);
 }
 
 export function uploadImg(file) {
     return request.post(
-        '/resource/'
+        `${baseUrl}`
     )
 }

@@ -141,7 +141,7 @@
 <script>
 import "@/assets/styles/book.css";
 import "@/assets/styles/read.css";
-import {reactive, toRefs, onMounted, onBeforeUnmount, onUnmounted, computed} from "vue";
+import {reactive, toRefs, onMounted, onBeforeUnmount, onUnmounted, computed, onActivated} from "vue";
 import { useRouter, useRoute } from "vue-router";
 import { getBookContent, getPreChapterId, getNextChapterId } from "@/api/book";
 import { ElMessage } from "element-plus";

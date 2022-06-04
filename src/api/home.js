@@ -1,11 +1,12 @@
 import request from '../utils/request'
 
+const baseUrl = 'front/home/'
+
 export function listHomeBooks() {
-    return request.get('/home/books');
+    return request.get(`${baseUrl}/books`);
 }
 
-
 export function listHomeFriendLinks() {
-    return request.get('/home/friend_Link/list');
+    return request.get(`${baseUrl}/friend_Link/list`);
 }
 

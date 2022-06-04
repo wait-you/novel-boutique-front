@@ -6,7 +6,7 @@
         <a class="book_cover">
           <img
             class="cover"
-            :src="`${imgBaseUrl}` + `${book.picUrl}`"
+            :src="bookImage"
             :alt="book.bookName"
             onerror="this.src='default.gif';this.onerror=null"
         /></a>
@@ -362,6 +362,16 @@ export default {
       updateComment: ""
     });
 
+    const bookImage = computed(() => {
+      if (state.book.picUrl){
+        if (state.book.picUrl.startsWith('http')){
+          return state.book.picUrl
+        }
+        return state.imgBaseUrl + state.book.picUrl
+      }
+      return ''
+    })
+
     const bookshelfDesc = computed(() => {
       if (state.bookShelfStatus === '0'){
         return '加入书架';
@@ -489,7 +499,8 @@ export default {
       updateUserComment,
       goUpdateComment,
       addBookshelf,
-      bookshelfDesc
+      bookshelfDesc,
+      bookImage
     };
   },
 };

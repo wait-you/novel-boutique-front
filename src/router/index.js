@@ -66,7 +66,7 @@ const router = createRouter({
       children: [
         {
           path: '/user',
-          redirect: '/user/setup'
+          redirect: '/user/user_info'
         },
         {
           path: 'setup',
@@ -163,7 +163,58 @@ const router = createRouter({
           component: () => import('@/views/user/info/UserInfo')
         }
       ]
-    }
+    },
+    {
+      path: '/author_register',
+      name: 'authorRegister',
+      component: () => import('@/views/author/Register')
+    },
+    {
+      path: '/author',
+      name: 'author',
+      component: () => import('@/views/author/AuthorPage'),
+      children: [
+        {
+          path: 'author',
+          redirect: '/author/book_list'
+        },
+        {
+          path: 'book_list',
+          name: 'authorBookList',
+          component: () => import('@/views/author/BookList')
+        },
+        {
+          path: 'book_add',
+          name: 'authorBookAdd',
+          component: () => import('@/views/author/BookAdd')
+        },
+        {
+          path: 'chapter_list',
+          name: 'authorChapterList',
+          component: () => import('@/views/author/ChapterList'),
+        },
+        {
+          path: 'chapter_add',
+          name: 'authorChapterAdd',
+          component: () => import('@/views/author/ChapterAdd'),
+        },
+        {
+          path: 'chapter_update',
+          name: 'authorChapterUpdate',
+          component: () => import('@/views/author/ChapterUpdate'),
+        },
+        {
+          path: 'author_income',
+          name: 'authorIncome',
+          component: () => import('@/views/author/AuthorIncome'),
+        },
+        {
+          path: 'author_income_detail',
+          name: 'authorIncomeDetail',
+          component: () => import('@/views/author/AuthorIncomeDetail'),
+        }
+      ]
+    },
   ]
 })
 
