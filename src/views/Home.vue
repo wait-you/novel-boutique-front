@@ -298,7 +298,7 @@ export default {
           .off("mouseenter")
           .on("mouseenter", function () {
             clearTimeout(open);
-
+            
             $(this).addClass("on").siblings().removeClass("on");
             $(".scBigImg dd")
               .eq(index)

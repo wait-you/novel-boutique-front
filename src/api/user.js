@@ -27,7 +27,7 @@ export function updateComment(id,content) {
 }
 
 export function getUserinfo() {
-    return request.get(`${baseUrl}/userInfo`);
+    return request.get(`front/user/userInfo`);
 }
 
 export function updateUserInfo(params) {

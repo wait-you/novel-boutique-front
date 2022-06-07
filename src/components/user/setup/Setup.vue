@@ -71,13 +71,6 @@ export default {
       uploadImgBaseUrl: process.env.VUE_APP_BASE_UPLOAD_IMG_URL,
     });
 
-    onMounted(async () => {
-      const { data } = await getUserinfo();
-      state.userPhoto = data.userPhoto;
-      state.nickName = data.nickName;
-      state.userSex = data.userSex;
-    });
-
     onActivated(async () => {
       const { data } = await getUserinfo();
       state.userPhoto = data.userPhoto;

@@ -45,12 +45,13 @@
               </li>
 
               <li>
-                <a
+                <router-link
                   class="ico_comment"
-                  href="/book/comment-1334332598936240128.html"
+                  :to="{ path: `/book/${$route.params.id}` }"
                   title="评论"
                 >
-                  <b>评论</b></a>
+                  <b>评论</b>
+                </router-link>
               </li>
             </ul>
           </div>
